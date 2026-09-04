@@ -31,6 +31,7 @@ footer{max-width:var(--shell);min-height:100px;margin:auto;padding:20px 10px;dis
 .connection-map b{grid-row:1/3;color:var(--magenta);font:8px "DM Mono",monospace}.connection-map>div:nth-of-type(2) b{color:var(--orange)}.connection-map>div:nth-of-type(3) b{color:#c67e00}
 .connection-map strong{font-size:11px;line-height:1}.connection-map span{margin-top:4px;font-size:7px;line-height:1.25;color:#746171}.connection-map>i{color:var(--magenta);font-style:normal;font-weight:800}
 .drug-snapshot dl{margin:16px 0 8px;display:grid;grid-template-columns:repeat(3,1fr);border-block:1px solid #ddd}
+.connection-map span.term{font-weight:800;color:inherit}
 .drug-snapshot dl div{padding:10px 12px;border-right:1px solid #ddd}
 .drug-snapshot dl div:last-child{border-right:0}
 .drug-snapshot dt{color:var(--magenta);font-size:22px;font-weight:800;letter-spacing:-.04em}
