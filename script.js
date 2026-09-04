@@ -28,55 +28,6 @@ dialog.addEventListener('click', (event) => {
   if (event.target === dialog) dialog.close();
 });
 
-const contractAddress = document.querySelector('[data-contract-address]');
-const contractCopy = document.querySelector('[data-contract-copy]');
-const contractCopyLabel = document.querySelector('[data-contract-copy-label]');
-const contractCopyStatus = document.querySelector('[data-contract-copy-status]');
-let copyResetTimer;
-
-const copyContractAddress = async () => {
-  const address = contractAddress.textContent.trim();
-  let copied = false;
-
-  try {
-    if (navigator.clipboard?.writeText) {
-      await navigator.clipboard.writeText(address);
-      copied = true;
-    }
-  } catch {
-    copied = false;
-  }
-
-  if (!copied) {
-    const textarea = document.createElement('textarea');
-    try {
-      textarea.value = address;
-      textarea.setAttribute('readonly', '');
-      textarea.style.position = 'fixed';
-      textarea.style.opacity = '0';
-      document.body.appendChild(textarea);
-      textarea.select();
-      copied = document.execCommand('copy');
-    } catch {
-      copied = false;
-    } finally {
-      textarea.remove();
-    }
-  }
-
-  clearTimeout(copyResetTimer);
-  contractCopyLabel.textContent = copied ? 'COPIED' : 'RETRY';
-  contractCopy.classList.toggle('copied', copied);
-  contractCopyStatus.textContent = copied ? 'Contract address copied.' : 'The contract address could not be copied.';
-  copyResetTimer = setTimeout(() => {
-    contractCopyLabel.textContent = 'COPY';
-    contractCopy.classList.remove('copied');
-    contractCopyStatus.textContent = '';
-  }, 1800);
-};
-
-contractCopy.addEventListener('click', copyContractAddress);
-
 const reveals = document.querySelectorAll('.reveal');
 
 if ('IntersectionObserver' in window && !reduceMotion) {
