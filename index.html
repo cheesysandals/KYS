@@ -172,9 +172,19 @@
       <p>WHEN YOU ARE DONE WITH THAT, HAVE A LOOK AT</p>
       <div><a class="buy" href="https://jup.ag/swap" target="_blank" rel="noopener">BUY KYS <b>↗</b></a><a class="chart" href="https://dexscreener.com/" target="_blank" rel="noopener">VIEW CHART <b>↗</b></a></div>
       <div class="contract-address">
-        <label for="token-contract-address">TOKEN CONTRACT ADDRESS <span>LIVE</span></label>
-        <input id="token-contract-address" data-contract-address type="text" value="0xcd4ea2cef32d14e0a879431d0c4844a165cfe51b" readonly aria-describedby="contract-address-note">
+        <div class="contract-address-head">
+          <span>TOKEN CONTRACT ADDRESS</span>
+          <span class="contract-status"><i aria-hidden="true"></i>LIVE</span>
+        </div>
+        <div class="contract-address-row">
+          <code id="token-contract-address" data-contract-address tabindex="0" aria-describedby="contract-address-note">0xcd4ea2cef32d14e0a879431d0c4844a165cfe51b</code>
+          <button type="button" data-contract-copy aria-label="Copy token contract address">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="5.5" y="5.5" width="8" height="8" rx="1"/><path d="M3.5 10.5h-1a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v1"/></svg>
+            <span data-contract-copy-label>COPY</span>
+          </button>
+        </div>
         <small id="contract-address-note">Always verify the full address before buying or swapping.</small>
+        <span class="sr-only" aria-live="polite" data-contract-copy-status></span>
       </div>
     </div>
   </dialog>
