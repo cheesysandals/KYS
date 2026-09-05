@@ -53,7 +53,9 @@
   <div class="scroll-progress" aria-hidden="true"><span data-scroll-progress></span></div>
   <div class="top-strip"><span>AN INDEPENDENT INTERNET PROJECT</span><button type="button" data-safety-open>NEED HELP NOW? ↗</button></div>
   <header class="site-header" data-header>
-    <a class="brand" href="#top"><strong>KYS</strong><span>KEEP YOURSELF SAFE</span></a>
+    <a class="brand" href="#top" aria-label="KYS — Keep Yourself Safe">
+      <img src="assets/kys-header-logo.png" width="640" height="205" alt="KYS — Keep Yourself Safe">
+    </a>
     <nav aria-label="Primary navigation"><a href="#about">ABOUT</a><a href="#how">HOW IT WORKS</a><a href="#health">YOUR HEALTH</a></nav>
     <button class="header-button" type="button" data-safety-open>KEEP YOURSELF SAFE ›</button>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle><span></span><span></span><i class="sr-only">Open menu</i></button>
@@ -106,6 +108,15 @@
             <article class="orange reveal"><span>1/1</span><h4>ALL<br>FEES</h4><p>100% of protocol fees are routed into JNJ.</p><b>02</b></article>
             <article class="yellow reveal"><span>JNJ</span><h4>HOLDER<br>REWARDS</h4><p>JNJ stock exposure is distributed to eligible KYS holders.</p><b>03</b></article>
           </div>
+          <div class="contract-box reveal" aria-label="Contract address">
+            <div class="contract-copy">
+              <span>ON-CHAIN DETAILS</span>
+              <h4>CONTRACT</h4>
+              <p>The verified contract address will be published here.</p>
+            </div>
+            <code data-contract-address>COMING SOON</code>
+            <button type="button" disabled aria-label="Contract address is not available yet">COPY</button>
+          </div>
           <p class="fine-print">“1/1 fees” means 100% of protocol fees under the proposed mechanism. The form, timing, eligibility, custody, and legal treatment of any JNJ distribution depend on the project’s implemented legal and technical structure. KYS tokens do not automatically confer legal ownership of JNJ shares. KYS is independent from Johnson &amp; Johnson.</p>
         </section>
 
@@ -152,10 +163,12 @@
   </div>
 
   <footer>
-    <div><strong>KYS</strong><span>KEEP YOURSELF SAFE</span></div>
+    <div class="footer-brand">
+      <img src="assets/kys-header-logo.png" width="640" height="205" alt="KYS — Keep Yourself Safe">
+    </div>
     <p>Independent parody project. Not medical or investment advice.</p>
     <div class="footer-links">
-      <a class="x-social" href="https://x.com/keepsafeRH" target="_blank" rel="noopener me" aria-label="Follow Keep Safe on X">
+      <a class="x-social" href="https://x.com/kys_onRH" target="_blank" rel="noopener me" aria-label="Follow KYS on X">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.657l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z"/></svg>
       </a>
       <a href="#top">TOP ↑</a>
@@ -170,7 +183,7 @@
     <small>If you’re not in immediate danger, consider telling someone you trust and contacting a qualified healthcare professional.</small>
     <div class="aftercare-actions">
       <p>WHEN YOU ARE DONE WITH THAT, HAVE A LOOK AT</p>
-      <div><a class="buy" href="https://jup.ag/swap" target="_blank" rel="noopener">BUY KYS <b>↗</b></a><a class="chart" href="https://dexscreener.com/" target="_blank" rel="noopener">VIEW CHART <b>↗</b></a></div>
+      <div><a class="buy" href="https://app.uniswap.org/swap" target="_blank" rel="noopener">BUY KYS <b>↗</b></a><a class="chart" href="https://dexscreener.com/" target="_blank" rel="noopener">VIEW CHART <b>↗</b></a></div>
     </div>
   </dialog>
   <script src="script.js"></script>
