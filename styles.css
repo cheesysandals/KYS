@@ -113,7 +113,7 @@ button:focus-visible,a:focus-visible{outline:3px solid var(--yellow);outline-off
 /* Contract address placeholder */
 .contract-box{margin:13px 0 0;padding:15px;display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:16px;background:#fff;border:1px solid rgba(76,25,76,.22);border-left:6px solid var(--purple);box-shadow:0 4px 0 rgba(76,25,76,.08)}
 .contract-copy span{color:var(--magenta);font:7px "DM Mono",monospace;letter-spacing:.1em}.contract-copy h4{margin:3px 0 2px;font-size:14px;line-height:1}.contract-copy p{margin:0;color:#766273;font-size:8px}
-.contract-box code{min-width:145px;padding:9px 12px;border:1px dashed rgba(76,25,76,.35);background:var(--cream);color:var(--purple);font:8px "DM Mono",monospace;letter-spacing:.08em;text-align:center}.contract-box button{border:0;border-radius:18px;padding:9px 13px;background:var(--purple);color:#fff;font-size:8px;font-weight:800}.contract-box button:disabled{cursor:not-allowed;opacity:.42}
+.contract-box code{min-width:145px;max-width:290px;padding:9px 12px;border:1px dashed rgba(76,25,76,.35);background:var(--cream);color:var(--purple);font:8px/1.35 "DM Mono",monospace;letter-spacing:.03em;text-align:center;overflow-wrap:anywhere}.contract-box button{border:0;border-radius:18px;padding:9px 13px;background:var(--purple);color:#fff;font-size:8px;font-weight:800;transition:transform .2s,background .2s}.contract-box button:hover{transform:translateY(-2px);background:var(--magenta)}
 @media(max-width:560px){.contract-box{grid-template-columns:1fr auto;gap:11px}.contract-copy{grid-column:1/-1}.contract-box code{min-width:0;text-align:left}.contract-box button{justify-self:end}}
 
 /* Content remains readable without JavaScript; motion is applied progressively. */

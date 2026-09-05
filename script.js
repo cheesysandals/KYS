@@ -4,6 +4,21 @@ const mobileMenu = document.querySelector('[data-mobile-menu]');
 const dialog = document.querySelector('[data-safety-dialog]');
 const progress = document.querySelector('[data-scroll-progress]');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const contractAddress = document.querySelector('[data-contract-address]');
+const contractCopyButton = document.querySelector('[data-contract-copy]');
+
+if (contractAddress && contractCopyButton) {
+  contractCopyButton.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(contractAddress.textContent.trim());
+      contractCopyButton.textContent = 'COPIED';
+      setTimeout(() => { contractCopyButton.textContent = 'COPY'; }, 1600);
+    } catch {
+      contractCopyButton.textContent = 'COPY FAILED';
+      setTimeout(() => { contractCopyButton.textContent = 'COPY'; }, 1600);
+    }
+  });
+}
 
 const setMenu = (open) => {
   mobileMenu.classList.toggle('open', open);
